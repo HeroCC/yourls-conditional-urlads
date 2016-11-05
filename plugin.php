@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Conditional URL Advertisements
-Plugin URI: http://yourls.org/
+Plugin URI: https://github.com/HeroCC/yourls-conditional-urlads
 Description: Conditionally send shortlinks through various link monetizing services
 Version: 1.0
 Author: HeroCC
