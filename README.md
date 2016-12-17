@@ -6,7 +6,7 @@ Plugin for [YOURLS](http://yourls.org).
 This plugin allows you to redirect all shortlinks through a link monetizer. 
 
 Currently, the following shorteners are supported:
-  * [AdFly](http://adf.ly/?id=2777408), trigger: `a/`
+  * [AdFly](https://adf.ly/?id=2777408), trigger: `a/`
   * [AdFoc.us](http://adfoc.us/?refid=287608), trigger `f/`
   * [CoinURL](https://coinurl.com/index.php?ref=5e7f93ae61a2bf890b40bd470929998b), trigger `c/`
 
