@@ -8,7 +8,6 @@ This plugin allows you to redirect all shortlinks through a link monetizer.
 Currently, the following shorteners are supported:
   * [AdFly](https://adf.ly/?id=2777408), trigger: `a/`
   * [AdFoc.us](https://adfoc.us/?refid=287608), trigger `f/`
-  * [CoinURL](https://coinurl.com/index.php?ref=5e7f93ae61a2bf890b40bd470929998b), trigger `c/`
   * [ouo.io](https://ouo.io/ref/0IqYvHOo), trigger `o/`
 
 Going to a shorturl with a trigger before it will automatically forward the url through the selected service (ex *sho.rt/a/test*). If it recognizes a trigger but there is no associated service it will not monetize the link.
@@ -34,12 +33,6 @@ To properly setup this plugin, you need to manually change the IDs from the defa
 1. Ensure you have a valid account and are logged in
 2. Navigate to [this url](http://adfoc.us/tools/site-links)
 3. Your ID is the number after '?id='
-
-### CoinURL
-1. Ensure you have a valid account and are logged in
-2. Navigate to [this url](https://coinurl.com/profile-dynamic.php)
-3. Click the 'Show code' button (both work)
-4. Your ID is the part after 'var id =' without the double quotes
 
 ### ouo.io
 1. Ensure you have a valid account and are logged in

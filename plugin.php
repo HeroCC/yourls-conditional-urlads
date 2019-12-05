@@ -10,16 +10,14 @@ Author URI: https://herocc.com/
 
 if( !defined( 'YOURLS_ABSPATH' ) ) die();
 
-define( 'TRIGGERS', array('a/', 'f/', 'c/', 'o/') ); // Add any possible trigger to use here
+define( 'TRIGGERS', array('a/', 'f/', 'o/') ); // Add any possible trigger to use here
 
 define( 'ADFLY_ID', '2777408' ); // Replace this with your Adfly ID
 define( 'ADFOCUS_ID', '287608' ); // Replace this with your Adfoc.us ID
-define( 'COINURL_ID', 'ab87bdb66600433a8bd4fd87aabd896a' ); // Replace this with your CoinURL ID
 define( 'OUO_ID', '0IqYvHOo' ); // You get the drill
 
 define( 'ADFLY_DOMAIN', 'https://adf.ly' ); // If you have a custom Adfly domain, replace this with it
 define( 'ADFOCUS_DOMAIN', 'https://adfoc.us' ); // Same for this
-define( 'COINURL_DOMAIN', 'https://cur.lv' ); // CoinUrl doesn't allow custom domains, but just incase it is configurable
 define( 'OUO_DOMAIN', 'https://ouo.io' ); 
 
 yourls_add_action( 'loader_failed', 'check_for_redirect' ); // On url fail, check here
@@ -39,8 +37,6 @@ function redirect_to_advert( $url, $code ) {
   if ( doAdvert ) {
     if ( redirectService == 'f' ) { // Use adfocus
       return ADFOCUS_DOMAIN . '/serve/sitelinks/?id=' . ADFOCUS_ID . '&url=' . $url;
-    } else if ( redirectService == 'c' ) { // Use CoinURL
-      return COINURL_DOMAIN . '/redirect.php?id=' . COINURL_ID . '&url=' . rawurlencode($url);
     } else if ( redirectService == 'a' ) { // Adfly
       return ADFLY_DOMAIN . '/' . ADFLY_ID . '/' . $url;
     } else if ( redirectService == 'o' ) { // OUO.io
