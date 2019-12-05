@@ -17,9 +17,9 @@ define( 'ADFOCUS_ID', '287608' ); // Replace this with your Adfoc.us ID
 define( 'COINURL_ID', 'ab87bdb66600433a8bd4fd87aabd896a' ); // Replace this with your CoinURL ID
 define( 'OUO_ID', '0IqYvHOo' ); // You get the drill
 
-define( 'ADFLY_DOMAIN', 'http://adf.ly' ); // If you have a custom Adfly domain, replace this with it
-define( 'ADFOCUS_DOMAIN', 'http://adfoc.us' ); // Same for this
-define( 'COINURL_DOMAIN', 'http://cur.lv' ); // CoinUrl doesn't allow custom domains, but just incase it is configurable
+define( 'ADFLY_DOMAIN', 'https://adf.ly' ); // If you have a custom Adfly domain, replace this with it
+define( 'ADFOCUS_DOMAIN', 'https://adfoc.us' ); // Same for this
+define( 'COINURL_DOMAIN', 'https://cur.lv' ); // CoinUrl doesn't allow custom domains, but just incase it is configurable
 define( 'OUO_DOMAIN', 'https://ouo.io' ); 
 
 yourls_add_action( 'loader_failed', 'check_for_redirect' ); // On url fail, check here
