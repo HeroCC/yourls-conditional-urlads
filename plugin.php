@@ -35,13 +35,21 @@ function check_for_redirect( $args ) {
 
 function redirect_to_advert( $url, $code ) {
   if ( doAdvert ) {
+	$redirectUrl = getRedirect();
     if ( redirectService == 'f' ) { // Use adfocus
-      return ADFOCUS_DOMAIN . '/serve/sitelinks/?id=' . ADFOCUS_ID . '&url=' . $url;
+      return ADFOCUS_DOMAIN . '/serve/sitelinks/?id=' . ADFOCUS_ID . '&url=' . $redirectUrl;
     } else if ( redirectService == 'a' ) { // Adfly
-      return ADFLY_DOMAIN . '/' . ADFLY_ID . '/' . $url;
+	  return ADFLY_DOMAIN . '/' . ADFLY_ID . '/' . $redirectUrl;
     } else if ( redirectService == 'o' ) { // OUO.io
-      return OUO_DOMAIN . '/qs/' . OUO_ID . '?s=' . $url;
+      return OUO_DOMAIN . '/qs/' . OUO_ID . '?s=' . $redirectUrl;
     }
   }
   return $url; // If none of those redirect services, forward to the normal URL
+}
+
+function getRedirect(){
+	$actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; // get the current url
+	$pieces = explode('/', $actual_link); // split the url into an arrray seperated by /
+	$last_word = array_pop($pieces); //  get the keyword - this may not work if you use a plugin to allow slashes in your shortened url
+	return '//' . $_SERVER['SERVER_NAME'] . '/' . $last_word; // replace the '/' after $_SERVER['SERVER_NAME' if your yourls is not in your base domain, such as '/shorten/'
 }
