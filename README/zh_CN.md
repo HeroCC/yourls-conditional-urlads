@@ -27,19 +27,19 @@
 以下方法 不同平台获取ID的方式
 
 ### AdFly
-1. Ensure you have a valid account and are logged in
-2. Navigate to [this url](https://adf.ly/publisher/tools#tools-api)
-3. Your ID is the number after 'Your User ID:' *not API key*
+1. 先[进去](https://login.adf.ly/login)登录，完事后回来继续看教程
+2. [点我访问](https://adf.ly/publisher/tools#tools-api)以获得UserID
+3. 你的ID显示在`Your User ID:`或者是`你的用户ID：` *不是API key阿喂!!!*
 
 ### AdFocus
-1. Ensure you have a valid account and are logged in
-2. Navigate to [this url](http://adfoc.us/tools/site-links)
-3. Your ID is the number after '?id='
+1. 先[进去](http://adfoc.us/)登录，完事后回来继续看教程
+2. [点我访问](http://adfoc.us/tools/site-links)以获得ID
+3. 你的ID在网页里面显示的模板链接 在`?id=`右边
 
 ### ouo.io
-1. Ensure you have a valid account and are logged in
-2. Navigate to [this url](https://ouo.io/manage/tools/full-page-script)
-3. Your ID is the bit inside the quotes for `ouo_token`
+1. 先[进去](http://ouo.io/)登录，完事后回来继续看教程(提示capecha的 关掉Adblock这类插件)
+2. [点我访问](https://ouo.io/manage/tools/full-page-script)以获得token
+3. 你的ID应该在`ouo_token`这个选项
 
 ## 致谢
 - 原作者：[@HeroCC](https://github.com/HeroCC)
