@@ -10,16 +10,16 @@
   * [AdFoc.us](http://adfoc.us/?refid=788613), trigger `f/`
   * [ouo.io](http://ouo.io/ref/MpFHTzmv), trigger `o/`
 
-Going to a shorturl with a trigger before it will automatically forward the url through the selected service (ex *sho.rt/a/test*). If it recognizes a trigger but there is no associated service it will not monetize the link.
+到一个有触发器的短地址服务之前，会自动通过选定的服务转发该url（例如*sho.rt/a/test*）。如果它识别了一个触发器，但没有相关的服务，它将不会使链接广告化。
 
-If you have another sevice you want supported, make a ticket for it!
+如果你有其他想要支持的服务，请为其发起issue
 
-## Installation
+## 如何安装
 1. 克隆到 `/user/plugins` 这个插件文件夹下
 2. 在原地复制 `user-config.php.example` 并更名为 `user-config.php`
 3. 编辑插件配置 (`user-config.php`) 
 4. 在管理员操作中心的插件管理启用该插件
-5. 测试短连接地址转换是否成功( short.link/a/test -> adfly -> short.link/test)
+5. 测试短连接地址转换是否成功( sho.rt/a/test -> adfly -> sho.rt/test)
 6. 有问题记得反馈即可
 
 ## 获取ID
