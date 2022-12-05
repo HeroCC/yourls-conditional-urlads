@@ -1,4 +1,4 @@
 # Conditional URL Advertisements
-#### Select Language
- * [zh_CN](./README/zh_CN.md)
- * [en_US](./README/en_US.md)
+#### Select language to view README.md
+* :cn: [Chinese Simplified(中文简体)](./README/zh_CN.md)
+* :us: [English(US)](./README/en_US.md)
