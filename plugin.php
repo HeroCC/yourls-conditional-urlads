@@ -31,7 +31,7 @@ function redirect_to_advert( $url, $code ) {
   if ( doAdvert ) {
 	$redirectUrl = getRedirect();
     if ( redirectService == 'f' ) { // Use adfocus
-      return ADFOCUS_DOMAIN . '/serve/sitelinks/?id=' . ADFOCUS_ID . '&url=' . $redirectUrl;
+      return ADFOCUS_DOMAIN . '/serve/sitelinks/?id=' . ADFOCUS_ID . '&url=http:' . $redirectUrl;
     } else if ( redirectService == 'a' ) { // Adfly
 	  return ADFLY_DOMAIN . '/' . ADFLY_ID . '/' . $redirectUrl;
     } else if ( redirectService == 'o' ) { // OUO.io
