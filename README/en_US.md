@@ -1,7 +1,11 @@
-# Conditional URL Advertisements
+# Conditional URL Advertisements [![Listed in Awesome YOURLS!](https://img.shields.io/badge/Awesome-YOURLS-C5A3BE)](https://github.com/YOURLS/awesome-yourls/)
 
-- Plugin for [YOURLS](http://yourls.org).
-- This Page's Language is：:us: [English(US)](./en_US.md)
+Requires [YOURLS](https://yourls.org) `1.91` and above.
+
+Select language: [:cn:](./zh_CN.md) / [:us:](./en_US.md)
+
+This Page's Language is：:us: [English(US)](./en_US.md)
+
 ---
 ## Description
 This plugin allows you to redirect all shortlinks through a link monetizer. 
