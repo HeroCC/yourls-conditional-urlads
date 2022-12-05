@@ -16,10 +16,11 @@ If you have another sevice you want supported, make a ticket for it!
 
 ## Installation
 1. Clone this repo to the `/user/plugins` plugins directory
-2. Edit the plugin's user config (inside `user-config.php`) to suit your needs
-3. Go to the Plugins administration page and activate the plugin
-4. Test your shortlinks with each activated service
-5. If everything works, celebrate!
+2. Copy `user-config.php.example` and rename it to `user-config.php`
+3. Edit the plugin's user config (inside `user-config.php`) to suit your needs
+4. Go to the Plugins administration page and activate the plugin
+5. Test your shortlinks with each activated service
+6. If everything works, celebrate!
 
 ## Getting your IDs
 To properly setup this plugin, you need to manually change the IDs from the defaults to your's. These instructions should show you how to do this for each service:
