@@ -1,6 +1,7 @@
 # Conditional URL Advertisements
 
-Plugin for [YOURLS](http://yourls.org). 
+- Plugin for [YOURLS](http://yourls.org).
+- This Page's Language is：:us: [English(US)](./en_US.md)
 
 ## Description
 This plugin allows you to redirect all shortlinks through a link monetizer. 
