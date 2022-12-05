@@ -16,7 +16,7 @@ If you have another sevice you want supported, make a ticket for it!
 
 ## Installation
 1. Clone this repo to the `/user/plugins` plugins directory
-2. Edit the plugin's user config (inside *user-config.php*) to suit your needs
+2. Edit the plugin's user config (inside `user-config.php`) to suit your needs
 3. Go to the Plugins administration page and activate the plugin
 4. Test your shortlinks with each activated service
 5. If everything works, celebrate!
