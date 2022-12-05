@@ -41,5 +41,5 @@
 3. Your ID is the bit inside the quotes for `ouo_token`
 
 ## 致谢
-- 原作者：@HeroCC
-- 后续更新 : @JackBailey
+- 原作者：[@HeroCC](https://github.com/HeroCC)
+- 后续更新 : [@JackBailey](https://github.com/JackBailey)
