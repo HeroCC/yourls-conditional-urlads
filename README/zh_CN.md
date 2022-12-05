@@ -1,6 +1,6 @@
-# Conditional URL Advertisements
-
-- 适用于[YOURLS](http://yourls.org)的插件. 
+# Ban User-Agent [![Listed in Awesome YOURLS!](https://img.shields.io/badge/Awesome-YOURLS-C5A3BE)](https://github.com/YOURLS/awesome-yourls/)
+- 需要安装 [YOURLS](https://yourls.org) 大于或等于`1.91`版本
+- 选择语言切换页面: [:cn:](./zh_CN.md) / [:us:](./en_US.md)
 - 当前页面语言为： :cn: [中文(简体)](./zh_CN.md)
 ---
 ## 插件描述
