@@ -31,11 +31,11 @@ function redirect_to_advert( $url, $code ) {
   if ( doAdvert ) {
 	$redirectUrl = getRedirect();
     if ( redirectService == 'f' ) { // Use adfocus
-      return ADFOCUS_DOMAIN . '/serve/sitelinks/?id=' . ADFOCUS_ID . '&url=https:' . $redirectUrl;
+      return ADFOCUS_DOMAIN . '/serve/sitelinks/?id=' . ADFOCUS_ID . '&url=' . PROTOCOL_TYPE . ':' . $redirectUrl;
     } else if ( redirectService == 'a' ) { // Adfly
-	  return ADFLY_DOMAIN . '/' . ADFLY_ID . '/https:' . $redirectUrl;
+	  return ADFLY_DOMAIN . '/' . ADFLY_ID . '/' . PROTOCOL_TYPE . ':' . $redirectUrl;
     } else if ( redirectService == 'o' ) { // OUO.io
-      return OUO_DOMAIN . '/qs/' . OUO_ID . '?s=https:' . $redirectUrl;
+      return OUO_DOMAIN . '/qs/' . OUO_ID . '?s=' . PROTOCOL_TYPE . ':' . $redirectUrl;
     }
   }
   return $url; // If none of those redirect services, forward to the normal URL
