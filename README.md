@@ -41,5 +41,5 @@ To properly setup this plugin, you need to manually change the IDs from the defa
 3. Your ID is the bit inside the quotes for `ouo_token`
 
 ## Acknowledgements
-Original Author：@HeroCC
-Patch Submitted by : @JackBailey
+- Original Author：@HeroCC
+- Patch Submitted by : @JackBailey
