@@ -1,6 +1,7 @@
 # Conditional URL Advertisements
 
-适用于[YOURLS](http://yourls.org). 
+- 适用于[YOURLS](http://yourls.org). 
+- 当前页面语言为： :cn: Chinese Simplified(中文简体)
 
 ## 插件描述
 为你的短域名套一层其他带广告的短链接系统
