@@ -1,5 +1,5 @@
 <?php
-define( 'PROTOCOL_TYPE', 'https' ); // input "http" or "https" (if https, your server have SSL)
+define( 'PROTOCOL_TYPE', 'https' ); // input "http" or "https" (if https, your website have SSL)
 
 define( 'ADFLY_ID', 'input_your_id_here' ); // Replace this with your Adfly ID
 define( 'ADFOCUS_ID', 'input_your_id_here' ); // Replace this with your Adfoc.us ID
