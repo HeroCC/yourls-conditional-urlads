@@ -1,6 +1,6 @@
 # Conditional URL Advertisements
 
-- 适用于[YOURLS](http://yourls.org). 
+- 适用于[YOURLS](http://yourls.org)的插件. 
 - 当前页面语言为： :cn: [Chinese Simplified(中文简体)](./zh_CN.md)
 ---
 ## 插件描述
