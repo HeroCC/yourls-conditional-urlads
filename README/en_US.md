@@ -2,7 +2,7 @@
 
 - Plugin for [YOURLS](http://yourls.org).
 - This Page's Language is：:us: [English(US)](./en_US.md)
-
+---
 ## Description
 This plugin allows you to redirect all shortlinks through a link monetizer. 
 
@@ -15,6 +15,7 @@ Going to a shorturl with a trigger before it will automatically forward the url 
 
 If you have another sevice you want supported, make a ticket for it!
 
+---
 ## Installation
 1. Clone this repo to the `/user/plugins` plugins directory
 2. Copy `user-config.php.example` and rename it to `user-config.php`
@@ -22,7 +23,7 @@ If you have another sevice you want supported, make a ticket for it!
 4. Go to the Plugins administration page and activate the plugin
 5. Test your shortlinks with each activated service
 6. If everything works, celebrate!
-
+---
 ## Getting your IDs
 To properly setup this plugin, you need to manually change the IDs from the defaults to your's. These instructions should show you how to do this for each service:
 
@@ -40,7 +41,7 @@ To properly setup this plugin, you need to manually change the IDs from the defa
 1. Ensure you have a valid account and are logged in
 2. Navigate to [this url](https://ouo.io/manage/tools/full-page-script)
 3. Your ID is the bit inside the quotes for `ouo_token`
-
+---
 ## Acknowledgements
 - Original : [@HeroCC](https://github.com/HeroCC)
 - Patch Updater : [@JackBailey](https://github.com/JackBailey)
