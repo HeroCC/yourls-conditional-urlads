@@ -40,3 +40,6 @@ To properly setup this plugin, you need to manually change the IDs from the defa
 2. Navigate to [this url](https://ouo.io/manage/tools/full-page-script)
 3. Your ID is the bit inside the quotes for `ouo_token`
 
+## Acknowledgements
+Original Author：@HeroCC
+Patch Submitted by : @JackBailey
