@@ -1,10 +1,7 @@
 # Conditional URL Advertisements [![Listed in Awesome YOURLS!](https://img.shields.io/badge/Awesome-YOURLS-C5A3BE)](https://github.com/YOURLS/awesome-yourls/)
-
-Requires [YOURLS](https://yourls.org) `1.91` and above.
-
-Select language: [:cn:](./zh_CN.md) / [:us:](./en_US.md)
-
-This Page's Language is：:us: [English(US)](./en_US.md)
+- Requires [YOURLS](https://yourls.org) `1.91` and above.
+- Select language: [:cn:](./zh_CN.md) / [:us:](./en_US.md)
+- This Page's Language is：:us: [English(US)](./en_US.md)
 
 ---
 ## Description
