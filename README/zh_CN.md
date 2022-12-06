@@ -51,6 +51,13 @@ vim user-config.php
 2. [点我访问](https://ouo.io/manage/tools/full-page-script)以获得token
 3. 你的ID应该在`ouo_token`这个选项
 ---
+## 目标清单
+状态标志    :x: 未解决    :o: 解决   :question: 未知状态
+| 状态 | 问题 |  解决方案 |
+|-|-|-|
+| :x: | 检测并兼容 [Ban User-Agent](https://github.com/8Mi-Tech/yourls-ban-useragent) 插件 |
+
+---
 ## 致谢
 - 原作者：[@HeroCC](https://github.com/HeroCC)
 - 后续更新 : [@JackBailey](https://github.com/JackBailey)
