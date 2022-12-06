@@ -47,7 +47,7 @@ To properly setup this plugin, you need to manually change the IDs from the defa
 Status Tags:    :x: 未解决    :o: 解决   :question: 未知状态
 | Status | Question |  Solved? |
 |-|-|-|
-| :x: | Detects and is compatible with the Ban User-Agent plugin |
+| :x: | Detects and is compatible with the [Ban User-Agent](https://github.com/8Mi-Tech/yourls-ban-useragent) plugin |
 
 ---
 ## Acknowledgements
