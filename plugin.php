@@ -42,7 +42,7 @@ function redirect_to_advert( $url, $code ) {
 }
 
 function getRedirect(){
-  $protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") 
+  $protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") ;
 	$actual_link = $protocol . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; // get the current url
 	$pieces = explode('/', $actual_link); // split the url into an arrray seperated by /
 	$last_word = array_pop($pieces); //  get the keyword - this may not work if you use a plugin to allow slashes in your shortened url
