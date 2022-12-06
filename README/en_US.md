@@ -43,6 +43,13 @@ To properly setup this plugin, you need to manually change the IDs from the defa
 2. Navigate to [this url](https://ouo.io/manage/tools/full-page-script)
 3. Your ID is the bit inside the quotes for `ouo_token`
 ---
+## To Do List
+Status Tags:    :x: 未解决    :o: 解决   :question: 未知状态
+| Status | Question |  Solved? |
+|-|-|-|
+| :x: | Detects and is compatible with the Ban User-Agent plugin |
+
+---
 ## Acknowledgements
 - Original : [@HeroCC](https://github.com/HeroCC)
 - Patch Updater : [@JackBailey](https://github.com/JackBailey)
