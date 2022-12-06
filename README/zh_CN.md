@@ -47,7 +47,7 @@ vim user-config.php
 3. 你的ID在网页里面显示的模板链接 在`?id=`右边
 
 ### ouo.io
-1. 先[进去](http://ouo.io/)登录，完事后回来继续看教程(提示capecha的 关掉Adblock这类插件)
+1. 先[进去](https://ouo.io/auth/signin)登录，完事后回来继续看教程(提示capecha的 关掉Adblock这类插件)
 2. [点我访问](https://ouo.io/manage/tools/full-page-script)以获得token
 3. 你的ID应该在`ouo_token`这个选项
 ---
