@@ -25,7 +25,7 @@
 6. 有问题记得反馈即可
 
 ### Linux用户可以看看这边 (假设你已经cd到自己的yourls站点文件夹)
-```
+```bash
 cd user/plugins
 git clone https://github.com/8Mi-Tech/yourls-conditional-urlads
 cd yourls-conditional-urlads
