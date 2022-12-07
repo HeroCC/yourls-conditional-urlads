@@ -30,12 +30,13 @@ function check_for_redirect( $args ) {
 function redirect_to_advert( $url, $code ) {
   if ( doAdvert ) {
 	$redirectUrl = getRedirect();
-    if ( redirectService == 'f' ) { // Use adfocus
-      return ADFOCUS_DOMAIN . '/serve/sitelinks/?id=' . ADFOCUS_ID . '&url=' . $redirectUrl;
-    } else if ( redirectService == 'a' ) { // Adfly
-	  return ADFLY_DOMAIN . '/' . ADFLY_ID . '/' . $redirectUrl;
-    } else if ( redirectService == 'o' ) { // OUO.io
-      return OUO_DOMAIN . '/qs/' . OUO_ID . '?s=' . $redirectUrl;
+    switch ( redirectService ) { 
+      case 'f': // Use adfocus
+        return ADFOCUS_DOMAIN . '/serve/sitelinks/?id=' . ADFOCUS_ID . '&url=' . $redirectUrl;
+      case 'a': // Adfly
+	    return ADFLY_DOMAIN . '/' . ADFLY_ID . '/' . $redirectUrl;
+      case 'o': // OUO.io
+        return OUO_DOMAIN . '/qs/' . OUO_ID . '?s=' . $redirectUrl;
     }
   }
   return $url; // If none of those redirect services, forward to the normal URL
