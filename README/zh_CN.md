@@ -7,9 +7,9 @@
 为你的短域名套一层其他带广告的短链接系统
 
 支持如下的广告平台(以下是注册链接):
-  * [AdFly](https://join-adf.ly/21969401), trigger: `a/`
-  * [AdFoc.us](http://adfoc.us/?refid=788613), trigger `f/`
-  * [ouo.io](http://ouo.io/ref/MpFHTzmv), trigger `o/`
+  * [AdFly](https://8mi.ink/a/ref-adfly), 触发标识: `a/`
+  * [AdFoc.us](https://8mi.ink/f/ref-adfoc), 触发标识 `f/`
+  * [ouo.io](https://8mi.ink/o/ref-ouoio), 触发标识 `o/`
 
 到一个有触发器的短地址服务之前，会自动通过选定的服务转发该url（例如*sho.rt/a/test*）。如果它识别了一个触发器，但没有相关的服务，它将不会使链接广告化。
 
