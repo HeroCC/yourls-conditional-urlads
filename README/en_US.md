@@ -8,9 +8,9 @@
 This plugin allows you to redirect all shortlinks through a link monetizer. 
 
 Currently, the following shorteners are supported:
-  * [AdFly](https://join-adf.ly/21969401), trigger: `a/`
-  * [AdFoc.us](https://adfoc.us/?refid=788613), trigger `f/`
-  * [ouo.io](https://ouo.io/ref/MpFHTzmv), trigger `o/`
+- [AdFly](https://8mi.ink/a/ref-adfly), trigger: `a/`
+- [AdFoc.us](https://8mi.ink/f/ref-adfoc), trigger `f/`
+- [ouo.io](https://8mi.ink/o/ref-ouoio), trigger `o/`
 
 Going to a shorturl with a trigger before it will automatically forward the url through the selected service (ex *sho.rt/a/test*). If it recognizes a trigger but there is no associated service it will not monetize the link.
 
