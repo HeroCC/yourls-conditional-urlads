@@ -1,4 +1,4 @@
-# Conditional URL Ads [![Listed in Awesome YOURLS!](https://img.shields.io/badge/Awesome-YOURLS-C5A3BE)](https://github.com/YOURLS/awesome-yourls/)
+# Conditional URLAds [![Listed in Awesome YOURLS!](https://img.shields.io/badge/Awesome-YOURLS-C5A3BE)](https://github.com/YOURLS/awesome-yourls/)
 - 需要安装 [YOURLS](https://yourls.org) 大于或等于`1.91`版本
 - 选择语言切换页面: [:cn:](./zh_CN.md) / [:us:](./en_US.md)
 - 当前页面语言为： :cn: [中文(简体)](./zh_CN.md)
@@ -56,6 +56,7 @@ vim user-config.php
 | 状态 | 问题 |  解决方案 |
 |-|-|-|
 | :o: | 检测并兼容 [Ban User-Agent](https://github.com/8Mi-Tech/yourls-ban-useragent) 插件 | 不用检测了，他直接抢在我前面执行，草了
+| :x: | 配置文件从 `user-config.php` 迁移到 `/admin/plugins.php?page=conditional-urlads` | 
 
 ---
 ## 致谢
