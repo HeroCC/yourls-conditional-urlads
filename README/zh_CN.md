@@ -1,4 +1,4 @@
-# Conditional URL Advertisements [![Listed in Awesome YOURLS!](https://img.shields.io/badge/Awesome-YOURLS-C5A3BE)](https://github.com/YOURLS/awesome-yourls/)
+# Conditional URL Ads [![Listed in Awesome YOURLS!](https://img.shields.io/badge/Awesome-YOURLS-C5A3BE)](https://github.com/YOURLS/awesome-yourls/)
 - 需要安装 [YOURLS](https://yourls.org) 大于或等于`1.91`版本
 - 选择语言切换页面: [:cn:](./zh_CN.md) / [:us:](./en_US.md)
 - 当前页面语言为： :cn: [中文(简体)](./zh_CN.md)
