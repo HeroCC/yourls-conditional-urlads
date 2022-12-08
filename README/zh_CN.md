@@ -55,7 +55,7 @@ vim user-config.php
 状态标志    :x: 未解决    :o: 解决   :question: 未知状态
 | 状态 | 问题 |  解决方案 |
 |-|-|-|
-| :x: | 检测并兼容 [Ban User-Agent](https://github.com/8Mi-Tech/yourls-ban-useragent) 插件 |
+| :o: | 检测并兼容 [Ban User-Agent](https://github.com/8Mi-Tech/yourls-ban-useragent) 插件 | 不用检测了，他直接抢在我前面执行，草了
 
 ---
 ## 致谢
