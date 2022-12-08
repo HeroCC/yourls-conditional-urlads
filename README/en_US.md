@@ -1,4 +1,4 @@
-# Conditional URL Ads [![Listed in Awesome YOURLS!](https://img.shields.io/badge/Awesome-YOURLS-C5A3BE)](https://github.com/YOURLS/awesome-yourls/)
+# Conditional URLAds [![Listed in Awesome YOURLS!](https://img.shields.io/badge/Awesome-YOURLS-C5A3BE)](https://github.com/YOURLS/awesome-yourls/)
 - Requires [YOURLS](https://yourls.org) `1.91` and above.
 - Select language: [:cn:](./zh_CN.md) / [:us:](./en_US.md)
 - This Page's Language is：:us: [English(US)](./en_US.md)
@@ -48,7 +48,7 @@ Status Tags:    :x: 未解决    :o: 解决   :question: 未知状态
 | Status | Question |  Solved? |
 |-|-|-|
 | :o: | Detects and is compatible with the [Ban User-Agent](https://github.com/8Mi-Tech/yourls-ban-useragent) plugin | No need to detect, he was executed before me
-
+| :x: | Config `user-config.php`  move to  `/admin/plugins.php?page=conditional-urlads` | 
 ---
 ## Acknowledgements
 - Original : [@HeroCC](https://github.com/HeroCC)
