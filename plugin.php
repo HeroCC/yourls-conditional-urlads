@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: Conditional URLAds
-Plugin URI: https://github.com/8Mi-Tech/yourls-conditional-urlads
+Plugin Name: Conditional URL Advertisements
+Plugin URI: https://github.com/HeroCC/yourls-conditional-urlads
 Description: Conditionally send shortlinks through various link monetizing services
 Version: 1.2
-Author: HeroCC / JackBailey / 8Mi_Yile
-Author URI: https://github.com/8Mi-Tech/yourls-conditional-urlads
+Author: HeroCC
+Author URI: https://herocc.com/
 */
 
 if( !defined( 'YOURLS_ABSPATH' ) ) die();
