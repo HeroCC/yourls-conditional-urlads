@@ -8,9 +8,9 @@
 This plugin allows you to redirect all shortlinks through a link monetizer. 
 
 Currently, the following shorteners are supported:
-- [AdFly](https://8mi.ink/a/ref-adfly), trigger: `a/`
-- [AdFoc.us](https://8mi.ink/f/ref-adfoc), trigger `f/`
-- [ouo.io](https://8mi.ink/o/ref-ouoio), trigger `o/`
+- [AdFly](https://adf.ly/?id=2777408), trigger: `a/`
+- [AdFoc.us](https://adfoc.us/?refid=287608), trigger `f/`
+- [ouo.io](https://ouo.io/ref/0IqYvHOo), trigger `o/`
 
 Going to a shorturl with a trigger before it will automatically forward the url through the selected service (ex *sho.rt/a/test*). If it recognizes a trigger but there is no associated service it will not monetize the link.
 
@@ -24,11 +24,13 @@ If you have another sevice you want supported, make a ticket for it!
 4. Go to the Plugins administration page and activate the plugin
 5. Test your shortlinks with each activated service
 6. If everything works, celebrate!
+
 ---
 ## Getting your IDs
 To properly setup this plugin, you need to manually change the IDs from the defaults to your's. These instructions should show you how to do this for each service:
 
 ### AdFly
+~To Be Deprecated~
 1. Ensure you have a valid account and are logged in
 2. Navigate to [this url](https://adf.ly/publisher/tools#tools-api)
 3. Your ID is the number after 'Your User ID:' *not API key*
@@ -42,6 +44,7 @@ To properly setup this plugin, you need to manually change the IDs from the defa
 1. Ensure you have a valid account and are logged in
 2. Navigate to [this url](https://ouo.io/manage/tools/full-page-script)
 3. Your ID is the bit inside the quotes for `ouo_token`
+
 ---
 ## To Do List
 Status Tags:    :x: 未解决    :o: 解决   :question: 未知状态

@@ -10,6 +10,7 @@
 - [AdFly](https://8mi.ink/a/ref-adfly), 触发标识: `a/`
 - [AdFoc.us](https://8mi.ink/f/ref-adfoc), 触发标识 `f/`
 - [ouo.io](https://8mi.ink/o/ref-ouoio), 触发标识 `o/`
+- [Linkvertise](https://8mi.ink/l/ref-linkvertise), 触发标识 `l/`
 
 到一个有触发器的短地址服务之前，会自动通过选定的服务转发该url（例如*sho.rt/a/test*）。如果它识别了一个触发器，但没有相关的服务，它将不会使链接广告化。
 
@@ -27,7 +28,7 @@
 ### Linux用户可以看看这边 (假设你已经cd到自己的yourls站点文件夹)
 ```bash
 cd user/plugins
-git clone https://github.com/8Mi-Tech/yourls-conditional-urlads
+git clone https://github.com/HeroCC/yourls-conditional-urlads
 cd yourls-conditional-urlads
 cp user-config.php.example user-config.php
 vim user-config.php
@@ -37,6 +38,7 @@ vim user-config.php
 以下方法 不同平台获取ID的方式
 
 ### AdFly
+~即将被废弃~
 1. 先[进去](https://login.adf.ly/login)登录，完事后回来继续看教程
 2. [点我访问](https://adf.ly/publisher/tools#tools-api)以获得UserID
 3. 你的ID显示在`Your User ID:`或者是`你的用户ID：` *不是API key阿喂!!!*
@@ -50,6 +52,16 @@ vim user-config.php
 1. 先[进去](https://ouo.io/auth/signin)登录，完事后回来继续看教程(提示capecha的 关掉Adblock这类插件)
 2. [点我访问](https://ouo.io/manage/tools/full-page-script)以获得token
 3. 你的ID应该在`ouo_token`这个选项
+
+### Linkvertise
+1. 先[登录](https://publisher.linkvertise.com/)
+2. 在网站左侧点击`Full Script API`, 并在右侧选择`Activate Full Script API`
+3. 再点击左侧的按钮`Full Script API`, 你应该会看到如下文本，并所需的文本是我马赛克的那串文本
+4. 复制出来并应用进插件内
+```html
+<script src="https://publisher.linkvertise.com/cdn/linkvertise.js"></script><script>linkvertise(******, {whitelist: [], blacklist: [""]});</script>
+```
+
 ---
 ## 目标清单
 状态标志    :x: 未解决    :o: 解决   :question: 未知状态

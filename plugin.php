@@ -1,16 +1,17 @@
+<script src="linkvertise.js"></script>
 <?php
 /*
 Plugin Name: Conditional URL Advertisements
 Plugin URI: https://github.com/HeroCC/yourls-conditional-urlads
 Description: Conditionally send shortlinks through various link monetizing services
-Version: 1.2
+Version: 1.2.1
 Author: HeroCC
 Author URI: https://herocc.com/
 */
 
 if( !defined( 'YOURLS_ABSPATH' ) ) die();
 
-define( 'TRIGGERS', array('a/', 'f/', 'o/') ); // Add any possible trigger to use here
+define( 'TRIGGERS', array('a/', 'f/', 'o/', 'l/') ); // Add any possible trigger to use here
 
 include 'user-config.php';
 
@@ -29,14 +30,16 @@ function check_for_redirect( $args ) {
 
 function redirect_to_advert( $url, $code ) {
   if ( doAdvert ) {
-	$redirectUrl = getRedirect();
+    $redirectUrl = getRedirect();
     switch ( redirectService ) { 
       case 'f': // Use adfocus
         return ADFOCUS_DOMAIN . '/serve/sitelinks/?id=' . ADFOCUS_ID . '&url=' . $redirectUrl;
       case 'a': // Adfly
-	    return ADFLY_DOMAIN . '/' . ADFLY_ID . '/' . $redirectUrl;
+        return ADFLY_DOMAIN . '/' . ADFLY_ID . '/' . $redirectUrl;
       case 'o': // OUO.io
         return OUO_DOMAIN . '/qs/' . OUO_ID . '?s=' . $redirectUrl;
+      case 'l': // linkvertise.com
+        return getLinkvertise(LINKVERTISE_ID,$redirectUrl);
     }
   }
   return $url; // If none of those redirect services, forward to the normal URL
@@ -48,4 +51,20 @@ function getRedirect(){
 	$pieces = explode('/', $actual_link); // split the url into an arrray seperated by /
 	$last_word = array_pop($pieces); //  get the keyword - this may not work if you use a plugin to allow slashes in your shortened url
 	return $protocol . '://' . $_SERVER['SERVER_NAME'] . '/' . $last_word; // replace the '/' after $_SERVER['SERVER_NAME' if your yourls is not in your base domain, such as '/shorten/'
+}
+// About Linkvertise
+function btoa($str) {
+  $buffer = null;
+  if ($str instanceof \Buffer) {
+      $buffer = $str;
+  } else {
+      $buffer = \pack("H*", \bin2hex($str));
+  }
+  return base64_encode($buffer);
+}
+
+function getLinkvertise($userid, $link) {
+  $base_url = "https://link-to.net/" . $userid . "/" . strval(rand()*1000) . "/dynamic";
+  $href = $base_url . "?r=" . btoa(utf8_encode($link));
+  return $href;
 }
