@@ -56,3 +56,4 @@ Status Tags:    :x: 未解决    :o: 解决   :question: 未知状态
 ## Acknowledgements
 - Original : [@HeroCC](https://github.com/HeroCC)
 - Patch Updater : [@JackBailey](https://github.com/JackBailey)
+- Linkverse Support: [@8Mi_Yile](https://github.com/8MiYile) (Powered By [FutureStunt/linkvertise](https://github.com/FutureStunt/linkvertise))

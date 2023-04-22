@@ -74,3 +74,4 @@ vim user-config.php
 ## 致谢
 - 原作者：[@HeroCC](https://github.com/HeroCC)
 - 后续更新 : [@JackBailey](https://github.com/JackBailey)
+- Linkverse支持: [@8Mi_Yile](https://github.com/8MiYile) (创意来源于[FutureStunt/linkvertise](https://github.com/FutureStunt/linkvertise))
