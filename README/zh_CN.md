@@ -42,22 +42,25 @@ vim user-config.php
 1. 先[进去](https://login.adf.ly/login)登录，完事后回来继续看教程
 2. [点我访问](https://adf.ly/publisher/tools#tools-api)以获得UserID
 3. 你的ID显示在`Your User ID:`或者是`你的用户ID：` *不是API key阿喂!!!*
+4. 并将ID复制进`user-config.php`的`ADFLY_ID`选项 (替换掉`input_your_id_here`)
 
 ### AdFocus
 1. 先[进去](http://adfoc.us/)登录，完事后回来继续看教程
 2. [点我访问](http://adfoc.us/tools/site-links)以获得ID
 3. 你的ID在网页里面显示的模板链接 在`?id=`右边
+4. 并将ID复制进`user-config.php`的`ADFOCUS_ID`选项 (替换掉`input_your_id_here`)
 
 ### ouo.io
 1. 先[进去](https://ouo.io/auth/signin)登录，完事后回来继续看教程(提示capecha的 关掉Adblock这类插件)
 2. [点我访问](https://ouo.io/manage/tools/full-page-script)以获得token
 3. 你的ID应该在`ouo_token`这个选项
+4. 并将ID复制进`user-config.php`的`OUO_ID`选项 (替换掉`input_your_id_here`)
 
 ### Linkvertise
 1. 先[登录](https://publisher.linkvertise.com/)
 2. 在网站左侧点击`Full Script API`, 并在右侧选择`Activate Full Script API`
 3. 再点击左侧的按钮`Full Script API`, 你应该会看到如下文本，并所需的文本是我马赛克的那串文本
-4. 复制出来并应用进插件内
+4. 并将ID复制进`user-config.php`的`LINKVERTISE_ID`选项 (替换掉`input_your_id_here`)
 ```html
 <script src="https://publisher.linkvertise.com/cdn/linkvertise.js"></script><script>linkvertise(******, {whitelist: [], blacklist: [""]});</script>
 ```

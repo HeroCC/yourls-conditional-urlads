@@ -34,16 +34,28 @@ To properly setup this plugin, you need to manually change the IDs from the defa
 1. Ensure you have a valid account and are logged in
 2. Navigate to [this url](https://adf.ly/publisher/tools#tools-api)
 3. Your ID is the number after 'Your User ID:' *not API key*
+4. copy the ID into the `ADFLY_ID` option of `user-config.php` (replacing `input_your_id_here`)
 
 ### AdFocus
 1. Ensure you have a valid account and are logged in
 2. Navigate to [this url](http://adfoc.us/tools/site-links)
 3. Your ID is the number after '?id='
+4. copy the ID into the `ADFOCUS_ID` option of `user-config.php` (replacing `input_your_id_here`)
 
 ### ouo.io
 1. Ensure you have a valid account and are logged in
 2. Navigate to [this url](https://ouo.io/manage/tools/full-page-script)
 3. Your ID is the bit inside the quotes for `ouo_token`
+4. copy the ID into the `OUO_ID` option of `user-config.php` (replacing `input_your_id_here`)
+
+### Linkvertise
+1. Ensure you have a valid account and are [logged in](https://publisher.linkvertise.com/)
+2. On the left side of the site click on `Full Script API`, and select on the right`Activate Full Script API`
+3. Click the button on the left again `Full Script API`, You should see the following text, and the required text is the string I marked with an asterisk
+4. copy the ID into the `LINKVERTISE_ID` option of `user-config.php` (replacing `input_your_id_here`)
+```html
+<script src="https://publisher.linkvertise.com/cdn/linkvertise.js"></script><script>linkvertise(******, {whitelist: [], blacklist: [""]});</script>
+```
 
 ---
 ## To Do List
