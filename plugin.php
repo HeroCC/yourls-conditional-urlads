@@ -12,7 +12,15 @@ if( !defined( 'YOURLS_ABSPATH' ) ) die();
 
 define( 'TRIGGERS', array('a/', 'f/', 'o/', 'l/') ); // Add any possible trigger to use here
 
-include 'user-config.php';
+#include 'user-config.php';
+define( 'ADFLY_ID', 'input_your_id_here' ); // Replace this with your Adfly ID
+define( 'ADFOCUS_ID', 'input_your_id_here' ); // Replace this with your Adfoc.us ID
+define( 'OUO_ID', 'input_your_id_here' ); // You get the drill
+define( 'LINKVERTISE_ID', 'input_your_id_here' ); // You get the drill
+
+define( 'ADFLY_DOMAIN', 'https://adf.ly' ); // If you have a custom Adfly domain, replace this with it
+define( 'ADFOCUS_DOMAIN', 'https://adfoc.us' ); // Same for this
+define( 'OUO_DOMAIN', 'https://ouo.io' ); 
 
 yourls_add_action( 'loader_failed', 'check_for_redirect' ); // On url fail, check here
 function check_for_redirect( $args ) {
@@ -38,7 +46,7 @@ function redirect_to_advert( $url, $code ) {
       case 'o': // OUO.io
         return OUO_DOMAIN . '/qs/' . OUO_ID . '?s=' . $redirectUrl;
       case 'l': // linkvertise.com
-        return getLinkvertise(LINKVERTISE_ID,$redirectUrl);
+        return getLinkvertise(LINKVERTISE_ID, $redirectUrl);
     }
   }
   return $url; // If none of those redirect services, forward to the normal URL
@@ -51,19 +59,10 @@ function getRedirect(){
   $last_word = array_pop($pieces); //  get the keyword - this may not work if you use a plugin to allow slashes in your shortened url
   return $protocol . '://' . $_SERVER['SERVER_NAME'] . '/' . $last_word; // replace the '/' after $_SERVER['SERVER_NAME' if your yourls is not in your base domain, such as '/shorten/'
 }
-// About Linkvertise
-function btoa($str) {
-  $buffer = null;
-  if ($str instanceof \Buffer) {
-      $buffer = $str;
-  } else {
-      $buffer = \pack("H*", \bin2hex($str));
-  }
-  return base64_encode($buffer);
-}
 
+// About Linkvertise
 function getLinkvertise($userid, $link) {
   $base_url = "https://link-to.net/" . $userid . "/" . strval(rand()*1000) . "/dynamic";
-  $href = $base_url . "?r=" . btoa(utf8_encode($link));
+  $href = $base_url . "?r=" . base64_encode(utf8_encode($link));
   return $href;
 }
