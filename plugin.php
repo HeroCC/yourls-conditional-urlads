@@ -10,14 +10,34 @@ Author URI: https://herocc.com/
 
 if( !defined( 'YOURLS_ABSPATH' ) ) die();
 
-define( 'TRIGGERS', array('a/', 'f/', 'o/', 'l/') ); // Add any possible trigger to use here
-
-#include 'user-config.php';
-define( 'ADFLY_ID', 'input_your_id_here' ); // Replace this with your Adfly ID
-define( 'ADFOCUS_ID', 'input_your_id_here' ); // Replace this with your Adfoc.us ID
-define( 'OUO_ID', 'input_your_id_here' ); // You get the drill
-define( 'LINKVERTISE_ID', 'input_your_id_here' ); // You get the drill
-
+yourls_add_action( 'plugins_loaded', 'conditional_urlads_addpage' );
+function conditional_urlads_addpage() {
+  yourls_register_plugin_page( 'conditional_urlads_settings', 'Conditional URLAds', 'conditional_urlads_loadpage' );
+}
+function conditional_urlads_loadpage(){
+  if (isset( $_POST['nonce'])){
+    yourls_verify_nonce( 'conditional_urlads_settings' );
+    #if( isset( $_POST['adfly_id'], $_POST['adfoc_id'], $_POST['ouoio_id'], $_POST['linkvertise_id'], ) ) 
+    if (isset($_POST['adfly_id'])){
+      yourls_update_option( 'conditional_urlads_adfly_id', $_POST['adfly_id'] );
+    }
+    if (isset($_POST['adfoc_id'])){
+      yourls_update_option( 'conditional_urlads_adfoc_id', $_POST['adfoc_id'] );
+    }
+    if (isset($_POST['ouoio_id'])){
+      yourls_update_option( 'conditional_urlads_ouoio_id', $_POST['ouoio_id'] );
+    }
+    if (isset($_POST['linkvertise_id'])){
+      yourls_update_option( 'conditional_urlads_linkvertise_id', $_POST['linkvertise_id'] );
+    }
+  }    
+  #$nonce = yourls_create_nonce( 'conditional_urlads_settings' );
+  include 'settings.php';
+}
+define( 'ADFLY_ID', yourls_get_option( 'conditional_urlads_adfly_id' ) ); // Replace this with your Adfly ID
+define( 'ADFOCUS_ID', yourls_get_option( 'conditional_urlads_adfoc_id' ) ); // Replace this with your Adfoc.us ID
+define( 'OUO_ID', yourls_get_option( 'conditional_urlads_ouoio_id' ) ); // You get the drill
+define( 'LINKVERTISE_ID', yourls_get_option( 'conditional_urlads_linkvertise_id' ) ); // You get the drill
 define( 'ADFLY_DOMAIN', 'https://adf.ly' ); // If you have a custom Adfly domain, replace this with it
 define( 'ADFOCUS_DOMAIN', 'https://adfoc.us' ); // Same for this
 define( 'OUO_DOMAIN', 'https://ouo.io' ); 
@@ -35,6 +55,7 @@ function check_for_redirect( $args ) {
   }
 }
 
+define( 'TRIGGERS', array('a/', 'f/', 'o/', 'l/') ); // Add any possible trigger to use here
 function redirect_to_advert( $url, $code ) {
   if ( doAdvert ) {
     $redirectUrl = getRedirect();
