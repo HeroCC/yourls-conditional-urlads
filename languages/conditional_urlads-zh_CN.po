@@ -22,6 +22,9 @@ msgstr "URL样例"
 msgid "Ramdom AdURL"
 msgstr "随机的广告地址"
 
+msgid "Enable"
+msgstr "启用"
+
 msgid "Save"
 msgstr "保存"
 

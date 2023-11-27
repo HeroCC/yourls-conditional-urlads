@@ -40,7 +40,8 @@ if( !defined( 'YOURLS_ABSPATH' ) ) die();
             <tr valign="center">
                 <th scope="row"><?php yourls_e( 'Ramdom AdURL', 'conditional_urlads' ); ?></th>
                 <td>
-                    <input type="checkbox" name="random_adurl_bool" value="true" <?php echo yourls_get_option('conditional_urlads_random_adurl_bool') ? 'checked' : ''; ?> />
+                    <input type="checkbox" id="random_adurl_bool" name="random_adurl_bool" value="true" <?php echo yourls_get_option('conditional_urlads_random_adurl_bool') ? 'checked' : ''; ?> />
+                    <label for="random_adurl_bool"><?php yourls_e( 'Enable', 'conditional_urlads' ); ?></label>
                 </td>
                 <th>r/</th>
                 <th><a href="https://8mi.ink/r/2345">https://8mi.ink/r/2345</a></th>
