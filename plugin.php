@@ -45,6 +45,14 @@ define( 'ADFLY_DOMAIN', 'https://adf.ly' ); // If you have a custom Adfly domain
 define( 'ADFOCUS_DOMAIN', 'https://adfoc.us' ); // Same for this
 define( 'OUO_DOMAIN', 'https://ouo.io' ); 
 
+// Trigger when all plugins are loaded
+yourls_add_action( 'plugins_loaded', 'conditional_urlads_load_textdomain' );
+
+// load custom text domain
+function conditional_urlads_load_textdomain() {
+    echo yourls_load_custom_textdomain( 'conditional_urlads', dirname( __FILE__ ) . '/languages' );
+}
+
 yourls_add_action( 'loader_failed', 'check_for_redirect' ); // On url fail, check here
 function check_for_redirect( $args ) {
   $regex = '!^'. implode($TRIGGERS,"|") .'(.*)!'; // Match any trigger

@@ -3,15 +3,15 @@ if( !defined( 'YOURLS_ABSPATH' ) ) die();
 ?>
 <div class="wrap">
     <h2>Conditional URLAds</h2>
-    <h4>Set your user ID （you can <a href="https://github.com/HeroCC/yourls-conditional-urlads">See Tutorial for details</a>）</h4>
+    <h4><?php yourls_e( 'Set your user ID', 'conditional_urlads' ); ?> （<?php yourls_e( 'You can', 'conditional_urlads' ); ?> <a href="https://github.com/HeroCC/yourls-conditional_urlads"><?php yourls_e( 'See Tutorial for Details', 'conditional_urlads' ); ?> </a>）<br><?php yourls_e( 'Current Language', 'conditional_urlads' ); ?> <?php echo yourls_apply_filter( 'load_custom_textdomain', yourls_get_locale(), 'conditional_urlads' );; ?></h4>
     <form method="post">
     <input type="hidden" name="nonce" value="<?php echo yourls_create_nonce( 'conditional_urlads_settings' ); ?>" />
         <table class="form-table">
             <tr valign="center" algin="char">
-                <th>Website</th>
-                <th>&nbsp;&nbsp;ID</th>
-                <th>String</th>
-                <th>Example URL</th>
+                <th><h4><?php yourls_e( 'Website', 'conditional_urlads' ); ?></h4></th>
+                <th><h4><?php yourls_e( 'User API ID', 'conditional_urlads' ); ?></h4></th>
+                <th><h4><?php yourls_e( 'Trigger String', 'conditional_urlads' ); ?></h4></th>
+                <th><h4><?php yourls_e( 'Example URL', 'conditional_urlads' ); ?></h4></th>
             </tr>
             <tr valign="center">
                 <th scope="row">Adfly</th>
@@ -38,7 +38,7 @@ if( !defined( 'YOURLS_ABSPATH' ) ) die();
                 <th><a href="https://8mi.ink/l/ref-linkvertise">https://8mi.ink/l/ref-linkvertise</a></th>
             </tr>
             <tr valign="center">
-                <th scope="row">Random AdUrl</th>
+                <th scope="row"><?php yourls_e( 'Ramdom AdURL', 'conditional_urlads' ); ?></th>
                 <td>
                     <input type="checkbox" name="random_adurl_bool" value="true" <?php echo yourls_get_option('conditional_urlads_random_adurl_bool') ? 'checked' : ''; ?> />
                 </td>
@@ -47,5 +47,5 @@ if( !defined( 'YOURLS_ABSPATH' ) ) die();
             </tr>
         </table>
         <br />
-        <input type="submit" value="Save" class="button" />
+        <input type="submit" value="<?php yourls_e( 'Save', 'conditional_urlads' ); ?>" class="button" />
     </form>
