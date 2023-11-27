@@ -1,0 +1,29 @@
+msgid "Set your user ID"
+msgstr "设置你的用户ID"
+
+msgid "You can"
+msgstr "你可以"
+
+msgid "See Tutorial for Details"
+msgstr "在此处查看详细教程"
+
+msgid "Website"
+msgstr "短地址提供方"
+
+msgid "User API ID"
+msgstr "你的接口ID"
+
+msgid "Trigger String"
+msgstr "触发标识"
+
+msgid "Example URL"
+msgstr "URL样例"
+
+msgid "Ramdom AdURL"
+msgstr "随机的广告地址"
+
+msgid "Save"
+msgstr "保存"
+
+msgid "Current Language"
+msgstr "当前语言"
