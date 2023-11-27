@@ -27,6 +27,12 @@ if( !defined( 'YOURLS_ABSPATH' ) ) die();
                 <th scope="row"><a href="https://publisher.linkvertise.com/dashboard#dynamic">Linkvertise</a></th>
                 <td><input type="text" name="linkvertise_id" value="<?php echo yourls_get_option('conditional_urlads_linkvertise_id'); ?>" /></td>
             </tr>
+            <tr valign="center">
+                <th scope="row">Random AdUrl</th>
+                <td>
+                    <input type="checkbox" name="random_adurl_bool" value="true" <?php echo yourls_get_option('conditional_urlads_random_adurl_bool') ? 'checked' : ''; ?> />
+                </td>
+            </tr>
         </table>
         <br />
         <input type="submit" value="Save" class="button" />

@@ -30,6 +30,8 @@ function conditional_urlads_loadpage(){
     if (isset($_POST['linkvertise_id'])){
       yourls_update_option( 'conditional_urlads_linkvertise_id', $_POST['linkvertise_id'] );
     }
+    
+    yourls_update_option( 'conditional_urlads_random_adurl_bool', isset($_POST['random_adurl_bool']));
   }    
   #$nonce = yourls_create_nonce( 'conditional_urlads_settings' );
   include 'settings.php';
@@ -38,6 +40,7 @@ define( 'ADFLY_ID', yourls_get_option( 'conditional_urlads_adfly_id' ) ); // Rep
 define( 'ADFOCUS_ID', yourls_get_option( 'conditional_urlads_adfoc_id' ) ); // Replace this with your Adfoc.us ID
 define( 'OUO_ID', yourls_get_option( 'conditional_urlads_ouoio_id' ) ); // You get the drill
 define( 'LINKVERTISE_ID', yourls_get_option( 'conditional_urlads_linkvertise_id' ) ); // You get the drill
+define( 'RANDOM_ADURL_BOOL', yourls_get_option( 'conditional_urlads_random_adurl_bool' ) );
 define( 'ADFLY_DOMAIN', 'https://adf.ly' ); // If you have a custom Adfly domain, replace this with it
 define( 'ADFOCUS_DOMAIN', 'https://adfoc.us' ); // Same for this
 define( 'OUO_DOMAIN', 'https://ouo.io' ); 
@@ -55,7 +58,7 @@ function check_for_redirect( $args ) {
   }
 }
 
-define( 'TRIGGERS', array('a/', 'f/', 'o/', 'l/') ); // Add any possible trigger to use here
+define( 'TRIGGERS', array('a/', 'f/', 'o/', 'l/','r/') ); // Add any possible trigger to use here
 function redirect_to_advert( $url, $code ) {
   if ( doAdvert ) {
     $redirectUrl = getRedirect();
@@ -68,17 +71,30 @@ function redirect_to_advert( $url, $code ) {
         return OUO_DOMAIN . '/qs/' . OUO_ID . '?s=' . $redirectUrl;
       case 'l': // linkvertise.com
         return getLinkvertise(LINKVERTISE_ID, $redirectUrl);
+      case 'r': //Random AdUrl
+        if( RANDOM_ADURL_BOOL ){
+          $keywords = ['a', 'f', 'o', 'l'];
+          return getRedirect($keywords[rand(0, 3)]);
+        }
     }
   }
   return $url; // If none of those redirect services, forward to the normal URL
 }
 
-function getRedirect(){
+function getRedirect($keyword = null){
   $protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") ;
   $actual_link = $protocol . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; // get the current url
   $pieces = explode('/', $actual_link); // split the url into an arrray seperated by /
   $last_word = array_pop($pieces); //  get the keyword - this may not work if you use a plugin to allow slashes in your shortened url
-  return $protocol . '://' . $_SERVER['SERVER_NAME'] . '/' . $last_word; // replace the '/' after $_SERVER['SERVER_NAME' if your yourls is not in your base domain, such as '/shorten/'
+  $redirect_url = $protocol . '://' . $_SERVER['SERVER_NAME'];
+
+  if ($keyword !== null) {
+      $redirect_url .= '/' . $keyword . '/' . $last_word;
+  } else {
+      $redirect_url .= '/' . $last_word;
+  }
+
+  return $redirect_url;
 }
 
 // About Linkvertise
