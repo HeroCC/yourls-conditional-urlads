@@ -30,3 +30,6 @@ msgstr "保存"
 
 msgid "Current Language"
 msgstr "当前语言"
+
+msgid "Save Complete"
+msgstr "保存完毕"
