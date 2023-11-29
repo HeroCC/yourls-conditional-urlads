@@ -1,0 +1,35 @@
+msgid "Set your user ID"
+msgstr "設置你的用戶ID"
+
+msgid "You can"
+msgstr "你可以"
+
+msgid "See Tutorial for Details"
+msgstr "查看詳細教程"
+
+msgid "Website"
+msgstr "網站"
+
+msgid "User API ID"
+msgstr "用戶API ID"
+
+msgid "Trigger String"
+msgstr "觸發字符串"
+
+msgid "Example URL"
+msgstr "示例URL"
+
+msgid "Ramdom AdURL"
+msgstr "隨機廣告地址"
+
+msgid "Enable"
+msgstr "啟用"
+
+msgid "Save"
+msgstr "保存"
+
+msgid "Current Language"
+msgstr "當前語言"
+
+msgid "Save Complete"
+msgstr "保存完成"
