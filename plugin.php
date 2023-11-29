@@ -3,7 +3,7 @@
 Plugin Name: Conditional URLAds
 Plugin URI: https://github.com/8Mi-Tech/yourls-conditional-urlads
 Description: Conditionally send shortlinks through various link monetizing services
-Version: 1.2.1
+Version: 1.3.1
 Author: 8Mi-Tech
 Author URI: https://8mi.ink
 */
@@ -11,13 +11,11 @@ Author URI: https://8mi.ink
 if ( !defined( 'YOURLS_ABSPATH' ) ) die();
 
 yourls_add_action( 'plugins_loaded', 'conditional_urlads_load_textdomain' );
-
 function conditional_urlads_load_textdomain() {
     yourls_load_custom_textdomain( 'conditional_urlads', dirname( __FILE__ ) . '/languages' );
 }
 
 yourls_add_action( 'plugins_loaded', 'conditional_urlads_addpage' );
-
 function conditional_urlads_addpage() {
     if ( $_SERVER[ 'REQUEST_METHOD' ] === 'POST' && $_SERVER["QUERY_STRING"] === 'page=conditional-urlads' ) {
         conditional_urlads_process_request();
@@ -25,7 +23,6 @@ function conditional_urlads_addpage() {
         yourls_register_plugin_page( 'conditional-urlads', 'Conditional URLAds', 'conditional_urlads_loadpage' );
     }
 }
-
 function conditional_urlads_process_request() {
     if ( isset( $_POST[ 'nonce' ] ) && yourls_verify_nonce( 'conditional-urlads' ) ) {
         ob_start();  // 开始输出缓冲
@@ -51,11 +48,11 @@ function conditional_urlads_process_request() {
     }
 
 }
-
 function conditional_urlads_loadpage() {
     #$nonce = yourls_create_nonce( 'conditional-urlads' );
     include 'settings.php';
 }
+
 define( 'ADFLY_ID', yourls_get_option( 'conditional_urlads_adfly_id' ) );// Replace this with your Adfly ID
 define( 'ADFOCUS_ID', yourls_get_option( 'conditional_urlads_adfoc_id' ) );// Replace this with your Adfoc.us ID
 define( 'OUO_ID', yourls_get_option( 'conditional_urlads_ouoio_id' ) );// You get the drill
