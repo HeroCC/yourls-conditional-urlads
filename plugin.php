@@ -98,7 +98,8 @@ function redirect_to_advert( $url, $code ) {
             case 'r': //Random AdUrl
             if ( RANDOM_ADURL_BOOL ) {
                 $keywords = [ 'a', 'f', 'o', 'l' ];
-                return getRedirect( $keywords[ rand( 0, 3 ) ] );
+                mt_srand(time());
+                return getRedirect( $keywords[ mt_rand( 0, 3 ) ] );
             }
         }
     }
@@ -125,7 +126,8 @@ function getRedirect( $keyword = null ) {
 
 // About Linkvertise
 function getLinkvertise( $userid, $link ) {
-    $base_url = 'https://link-to.net/' . $userid . '/' . strval( rand()*1000 ) . '/dynamic';
+    mt_srand(time());
+    $base_url = 'https://link-to.net/' . $userid . '/' . strval( mt_rand()*1000 ) . '/dynamic';
     $href = $base_url . '?r=' . base64_encode( utf8_encode( $link ) );
     return $href;
 }
