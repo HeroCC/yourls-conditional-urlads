@@ -88,19 +88,19 @@ function redirect_to_advert( $url, $code ) {
         $redirectUrl = getRedirect();
         switch ( redirectService ) {
             case 'f': // Use adfocus
-            return ADFOCUS_DOMAIN . '/serve/sitelinks/?id=' . ADFOCUS_ID . '&url=' . $redirectUrl;
+                return ADFOCUS_DOMAIN . '/serve/sitelinks/?id=' . ADFOCUS_ID . '&url=' . $redirectUrl;
             case 'a': // Adfly
-            return ADFLY_DOMAIN . '/' . ADFLY_ID . '/' . $redirectUrl;
+                return ADFLY_DOMAIN . '/' . ADFLY_ID . '/' . $redirectUrl;
             case 'o': // OUO.io
-            return OUO_DOMAIN . '/qs/' . OUO_ID . '?s=' . $redirectUrl;
+                return OUO_DOMAIN . '/qs/' . OUO_ID . '?s=' . $redirectUrl;
             case 'l': // linkvertise.com
-            return getLinkvertise( LINKVERTISE_ID, $redirectUrl );
+                return getLinkvertise( LINKVERTISE_ID, $redirectUrl );
             case 'r': //Random AdUrl
-            if ( RANDOM_ADURL_BOOL ) {
-                $keywords = [ 'a', 'f', 'o', 'l' ];
-                mt_srand(time());
-                return getRedirect( $keywords[ mt_rand( 0, 3 ) ] );
-            }
+                if ( RANDOM_ADURL_BOOL ) {
+                    $keywords = [ 'a', 'f', 'o', 'l' ];
+                    mt_srand();
+                    return getRedirect( $keywords[ mt_rand( 0, 3 ) ] );
+                }
         }
     }
     return $url;
