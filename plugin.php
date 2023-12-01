@@ -85,7 +85,8 @@ function check_for_redirect( $args ) {
 define( 'TRIGGERS', array( 'a/', 'f/', 'o/', 'l/', 'r/' ) );// Add any possible trigger to use here
 function redirect_to_advert( $url, $code ) {
     if ( doAdvert ) {
-        $redirectUrl = getRedirect();
+        $redirectUrl = getRedirect(['type' => 'minus', 'in-string' => redirectService]);
+        mt_srand();
         switch ( redirectService ) {
             case 'f': // Use adfocus
                 return ADFOCUS_DOMAIN . '/serve/sitelinks/?id=' . ADFOCUS_ID . '&url=' . $redirectUrl;
@@ -94,12 +95,11 @@ function redirect_to_advert( $url, $code ) {
             case 'o': // OUO.io
                 return OUO_DOMAIN . '/qs/' . OUO_ID . '?s=' . $redirectUrl;
             case 'l': // linkvertise.com
-                return getLinkvertise( LINKVERTISE_ID, $redirectUrl );
+                return 'https://link-to.net/' . LINKVERTISE_ID . '/' . strval( mt_rand()*1000 ) . '/dynamic?r=' . base64_encode( utf8_encode( $redirectUrl ) );
             case 'r': //Random AdUrl
                 if ( RANDOM_ADURL_BOOL ) {
                     $keywords = [ 'a', 'f', 'o', 'l' ];
-                    mt_srand();
-                    return getRedirect( $keywords[ mt_rand( 0, 3 ) ] );
+                    return getRedirect(['type' => 'replace', 'in-string' => 'r', 'out-string' => $keywords[mt_rand(0, 3)]]);
                 }
         }
     }
@@ -107,27 +107,21 @@ function redirect_to_advert( $url, $code ) {
     // If none of those redirect services, forward to the normal URL
 }
 
-function getRedirect( $keyword = null ) {
-    $protocol = ( isset( $_SERVER[ 'HTTPS' ] ) && $_SERVER[ 'HTTPS' ] === 'on' ? 'https' : 'http' ) ;
-    $actual_link = $protocol . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-    // get the current url
-    $pieces = explode( '/', $actual_link );
-    // split the url into an arrray seperated by /
-    $last_word = array_pop( $pieces );
-    //  get the keyword - this may not work if you use a plugin to allow slashes in your shortened url
-    $redirect_url = $protocol . '://' . $_SERVER[ 'SERVER_NAME' ];
-    if ( $keyword !== null ) {
-        $redirect_url .= '/' . $keyword . '/' . $last_word;
-    } else {
-        $redirect_url .= '/' . $last_word;
-    }
-    return $redirect_url;
-}
+function getRedirect($params) {
+    $type = isset($params['type']) ? $params['type'] : NULL; // plus minus replace
+    $in_string = isset($params['in-string']) ? $params['in-string'] : NULL; // for plus minus replace
+    $out_string= isset($params['out-string']) ? $params['out-string'] : NULL; // for replace
 
-// About Linkvertise
-function getLinkvertise( $userid, $link ) {
-    mt_srand(time());
-    $base_url = 'https://link-to.net/' . $userid . '/' . strval( mt_rand()*1000 ) . '/dynamic';
-    $href = $base_url . '?r=' . base64_encode( utf8_encode( $link ) );
-    return $href;
+    $protocol = ( isset( $_SERVER[ 'HTTPS' ] ) && $_SERVER[ 'HTTPS' ] === 'on' ? 'https' : 'http' ) ;
+    switch($type){
+        case 'plus':
+            return "$protocol://$_SERVER[HTTP_HOST]/$in_string$_SERVER[REQUEST_URI]";
+        case 'minus':
+            return "$protocol://$_SERVER[HTTP_HOST]/" . ltrim($_SERVER['REQUEST_URI'], "/$in_string");
+        case 'replace':
+            return "$protocol://$_SERVER[HTTP_HOST]/$out_string/" . ltrim($_SERVER['REQUEST_URI'], "/$in_string");
+        default:
+            return "$protocol://$_SERVER[HTTP_HOST]/$_SERVER[REQUEST_URI]";
+    }
 }
+?>
