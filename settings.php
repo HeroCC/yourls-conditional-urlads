@@ -58,7 +58,7 @@ function display_settings_table() {
     <div class="wrap">
         <h2>Conditional URLAds</h2>
         <h4>
-            {$lang_syuid} （{$lang_yc}<a href="https://github.com/HeroCC/yourls-conditional_urlads">{$lang_stfd} </a>）<br>
+            {$lang_syuid} （{$lang_yc} <a href="https://github.com/8Mi-Tech/yourls-conditional-urlads/wiki">{$lang_stfd} </a>）<br>
         </h4>
         <form method="post" class="inline-form" >
         <input type="hidden" name="nonce" value="{$nonce}" />
