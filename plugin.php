@@ -3,7 +3,7 @@
 Plugin Name: Conditional URLAds
 Plugin URI: https://github.com/8Mi-Tech/yourls-conditional-urlads
 Description: Conditionally send shortlinks through various link monetizing services
-Version: 1.3
+Version: 1.4
 Author: 8Mi-Tech
 Author URI: https://8mi.ink
 */
