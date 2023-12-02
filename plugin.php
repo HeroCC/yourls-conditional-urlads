@@ -115,7 +115,7 @@ function getRedirect($params) {
     $protocol = ( isset( $_SERVER[ 'HTTPS' ] ) && $_SERVER[ 'HTTPS' ] === 'on' ? 'https' : 'http' ) ;
     switch($type){
         case 'plus':
-            return "$protocol://$_SERVER[HTTP_HOST]/$in_string$_SERVER[REQUEST_URI]";
+            return "$protocol://$_SERVER[HTTP_HOST]/$in_string/$_SERVER[REQUEST_URI]";
         case 'minus':
             return "$protocol://$_SERVER[HTTP_HOST]/" . ltrim($_SERVER['REQUEST_URI'], "/$in_string");
         case 'replace':
